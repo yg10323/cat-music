@@ -1,15 +1,18 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect } from 'react';
 import { renderRoutes } from 'react-router-config';
-
 import { dicoverMenu } from "@/common/local-data";
-
 import { NavLink } from 'react-router-dom';
 import {
   DiscoverWrapper,
   TopMenu
 } from './style';
 
+import request from '@/service/request';
+
 export default memo(function CatDiscover(props) {
+
+  useEffect(() => {
+  }, [])
   const { route } = props;
 
   return (

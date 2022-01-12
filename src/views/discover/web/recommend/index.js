@@ -1,9 +1,21 @@
-import React, { memo } from 'react'
+import React, { memo, useEffect } from 'react'
 
-export default memo(function CatRecommend() {
+import { useDispatch } from 'react-redux'
+import { getTopBannerAction } from './store/actionCreators'
+
+function CatRecommend() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getTopBannerAction())
+  }, [dispatch])
+
   return (
     <div>
       <h2>CatRecommend</h2>
     </div>
   )
-})
+}
+
+
+export default memo(CatRecommend)
