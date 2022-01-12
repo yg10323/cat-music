@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from 'react';
+import React, { memo } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { dicoverMenu } from "@/common/local-data";
 import { NavLink } from 'react-router-dom';
@@ -7,12 +7,8 @@ import {
   TopMenu
 } from './style';
 
-import request from '@/services/request';
 
 export default memo(function CatDiscover(props) {
-
-  useEffect(() => {
-  }, [])
   const { route } = props;
 
   return (
