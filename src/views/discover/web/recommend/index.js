@@ -2,6 +2,9 @@ import React, { memo } from 'react'
 
 import CatTopBanner from './web/top-banner';
 import CatHotRecommend from './web/hot-recommend'
+import CatNewAlbum from './web/new-album'
+import CatRankingList from './web/ranking-list'
+
 
 import {
   RecommendWrapper,
@@ -18,6 +21,8 @@ function CatRecommend() {
       <Content className="wrap-v2">
         <RecommendLeft>
           <CatHotRecommend />
+          <CatNewAlbum />
+          <CatRankingList />
         </RecommendLeft>
         <RecommendRight></RecommendRight>
       </Content>
