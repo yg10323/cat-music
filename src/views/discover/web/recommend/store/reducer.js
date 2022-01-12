@@ -17,7 +17,6 @@ function reducer(state = defaultState, action) {
     case actionTypes.CHANGE_NEW_ALBUM:
       return state.set("newAlbums", action.newAlbums);
 
-
     default:
       return state;
   }
