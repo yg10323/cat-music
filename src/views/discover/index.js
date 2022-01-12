@@ -7,7 +7,7 @@ import {
   TopMenu
 } from './style';
 
-import request from '@/service/request';
+import request from '@/services/request';
 
 export default memo(function CatDiscover(props) {
 

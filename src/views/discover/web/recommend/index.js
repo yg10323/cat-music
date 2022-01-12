@@ -1,9 +1,16 @@
 import React, { memo, useEffect } from 'react'
 
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { getTopBannerAction } from './store/actionCreators'
 
 function CatRecommend() {
+
+
+  // 组件和redux关联, 获取数据 进行相关操作
+  const { topBanners } = useSelector(state => ({
+    topBanners: state.recommend.topBanners
+  }))
+
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -12,7 +19,7 @@ function CatRecommend() {
 
   return (
     <div>
-      <h2>CatRecommend</h2>
+      <h2>CatRecommend:{topBanners.length}</h2>
     </div>
   )
 }
