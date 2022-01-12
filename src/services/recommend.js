@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import request from './request';
 
 export function getTopBanners() {
@@ -17,7 +18,7 @@ export function getHotRecommends(limit) {
 
 export function getNewAlbums(limit) {
   return request({
-    url: "/top/album",
+    url: "/album/newest",
     params: {
       limit
     }
